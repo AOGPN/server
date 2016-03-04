@@ -18,6 +18,8 @@ Vagrant.configure(2) do |config|
     vb.memory = "2048" # You need 2 GB of RAM or 1 GB swap
   end
 
+  config.vm.network :forwarded_port, guest: 443, host: 4443
+
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "playbook.yml"
   end
