@@ -15,8 +15,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
 
   config.vm.provider "virtualbox" do |vb|
-    # You need 2 GB of RAM or 1 GB swap
-    vb.memory = "2048"
+    vb.memory = "2048" # You need 2 GB of RAM or 1 GB swap
   end
 
   config.vm.provision "ansible" do |ansible|
