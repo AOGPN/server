@@ -1,4 +1,3 @@
+---
 dependencies:
-  - role: base-server
   - role: angstwad.docker_ubuntu
-  - role: discourse

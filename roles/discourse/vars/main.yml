@@ -1,0 +1,7 @@
+---
+discourse_server_name: forum.opengovernment.org.au
+discourse_developer_emails: henare@oaf.org.au
+cuttlefish_server: cuttlefish.oaf.org.au
+cuttlefish_username: "{{ encrypted_cuttlefish_username }}"
+cuttlefish_password: "{{ encrypted_cuttlefish_password }}"
+discourse_ssl_key: "{{ encrypted_discourse_ssl_key }}"
