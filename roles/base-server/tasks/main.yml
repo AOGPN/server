@@ -27,6 +27,10 @@
   apt:
     pkg: git
 
+- name: Ensure nginx is installed
+  apt:
+    pkg: nginx
+
 # Setup timezone stuff
 
 - name: Install tzdata package
