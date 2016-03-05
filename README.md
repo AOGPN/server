@@ -20,7 +20,7 @@ It's configured as forum.opengovernment.org.au so when you get things like email
 
 ### Production
 
-TODO: Instructions for provisioning a server.
+    ansible-playbook --user=root --inventory-file=hosts playbook.yml
 
 ## Memory
 
