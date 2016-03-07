@@ -31,6 +31,9 @@
   apt:
     pkg: nginx
 
+- name: Generate DH Parameters for nginx
+  command: openssl dhparam -out dhparams.pem 2048 chdir=/etc/nginx creates=/etc/nginx/dhparams.pem
+
 # Setup timezone stuff
 
 - name: Install tzdata package
