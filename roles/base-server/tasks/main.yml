@@ -1,4 +1,6 @@
 ---
+- include_vars: encrypted.yml
+
 # tasks file for base-server
 - name: Enable firewall and deny traffic by default
   ufw:
@@ -31,8 +33,10 @@
   apt:
     pkg: nginx
 
-- name: Generate DH Parameters for nginx
-  command: openssl dhparam -out dhparams.pem 2048 chdir=/etc/nginx creates=/etc/nginx/dhparams.pem
+- name: Copy DH Parameters for nginx
+  copy:
+    content: "{{ dhparams }}"
+    dest: /etc/nginx/dhparams.pem
 
 # Setup timezone stuff
 
